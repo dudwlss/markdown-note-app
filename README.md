@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# 📖 React Markdown Note App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 개요
 
-## Available Scripts
+서버 연동 없이 **React**만을 사용하여 구현한 개인 메모/노트 관리 애플리케이션입니다.
 
-In the project directory, you can run:
+본 프로젝트는 React의 **상태 관리 (`useState`, `useEffect`)**, **컴포넌트 분리**, **이벤트 처리** 능력을 종합적으로 확인하기 위해 진행되었습니다. 모든 데이터는 브라우저의 **Local Storage**에 저장되어 데이터 영속성을 확보합니다.
 
-### `npm start`
+## ✨ 주요 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| 기능                | 설명                                                                                                | 구현 기술                          |
+| :------------------ | :-------------------------------------------------------------------------------------------------- | :--------------------------------- |
+| **실시간 미리보기** | 에디터에 Markdown 텍스트를 입력하는 즉시 오른쪽 패널에 HTML로 변환된 결과를 보여줍니다.             | `react-markdown` 라이브러리        |
+| **노트 CRUD**       | 새 노트 **생성**, 목록에서 **선택 및 로드**, 내용 **수정/저장**, 노트 **삭제** 기능 제공.           | `useState`를 이용한 배열 상태 관리 |
+| **데이터 영속성**   | 브라우저 종료 후에도 데이터가 유지되도록 **Local Storage**를 활용하여 데이터를 저장하고 불러옵니다. | `useEffect`를 사용한 상태 동기화   |
+| **제목 자동 추출**  | 노트 저장 시, 내용의 첫 줄을 자동으로 노트 제목으로 사용하여 목록에 표시합니다.                     | 문자열 처리 로직                   |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 💻 기술 스택
 
-### `npm test`
+- **Front-end:** React.js
+- **State Management:** `useState`, `useEffect`
+- **Markdown Rendering:** `react-markdown`
+- **Data Persistence:** Local Storage
+- **Styling:** Pure CSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚙️ 설치 및 실행 방법
 
-### `npm run build`
+프로젝트를 로컬 환경에서 실행하기 위한 단계입니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. 저장소 클론 및 이동
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+git clone [본인의 저장소 URL]
+cd markdown-note-app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. 의존성 설치
 
-### `npm run eject`
+프로젝트에 필요한 모든 라이브러리 (React 및 react-markdown)를 설치합니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm install react-markdown
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. 애플리케이션 실행
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm start
